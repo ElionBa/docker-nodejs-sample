@@ -1,48 +1,62 @@
-# **Thema:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
+# Installation des Projekts
 
-In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen **Markdown**, **Git**, **GitHub** und **Docker** kombiniert. Die Aufgabe besteht darin, eine ToDo-Applikation zu erstellen und diese in einem Docker-Container bereitzustellen.
+## Klonen des Repositories
+#### 1. Navigieren Sie auf GitHub zur Hauptseite des Repositorys.
 
-### **Aufgabenstellung:**
+#### 2. Klicke oberhalb der Liste der Dateien auf  Code.
 
-1. **GitHub-Fork erstellen:**
-   - Erstelle einen **Fork** des folgenden GitHub-Repositories: [docker-nodejs-sample](https://github.com/ICT-BLJ/docker-nodejs-sample).
-   - Clone deinen Fork lokal auf deinen Computer.
 
-2. **Erstellen einer README-Datei in Markdown:**
-   - Erstelle eine **README.md** Datei im Root-Verzeichnis des Projekts.
-   - Die README soll alle Schritte zur **Installation des Projekts** enthalten. Dazu gehören:
-     - Klonen des Repositories
-     - Installation der notwendigen Pakete
-     - Docker-Konfiguration und -Installation
-     - Starten der Applikation in einem Docker-Container
-   - Nutze [Markdown](https://www.markdownguide.org/cheat-sheet/) für die Struktur und Formatierung der Datei.
+#### 3. Kopiere die URL für das Repository.
 
-3. **Dokumentation der Vorgehensweise:**
-   - Verfasse eine vollständige **Dokumentation in Word**, in der die Arbeitsschritte beschrieben werden. Diese Schritte sind:
-     - Klonen des Repositories
-     - Einrichtung der Entwicklungsumgebung
-     - Erstellung der README.md
-     - Verwendung von Git (Commit, Push)
-     - Erstellung und Nutzung von Docker-Containern
-   - Verwende die während des Office-Kurses erarbeiteten Kenntnisse für das Erstellen dieses Dokuments.
+- Um ein Repository über HTTPS zu klonen, klicke unter „HTTPS“ auf .
 
-4. **Dockerize das Node.js-Projekt:**
-   - Verfolge die Anleitung unter [docs.docker.com](https://docs.docker.com/guides/language/nodejs/containerize/) ab dem Schritt **"Initialize Docker inits"**.
-   - Dein Ziel ist es, das Projekt in einem Docker-Container lauffähig zu machen, sodass am Ende eine **ToDo-Applikation** in einem Docker-Container bereitsteht.
+- Wenn du das Repository mithilfe eines SSH-Schlüssels klonen möchtest, einschließlich eines Zertifikats, das von der SSH-Zertifizierungsstelle deiner Organisation ausgestellt wurde, wähle SSH und dann  aus.
 
-5. **Git-Workflows:**
-   - Arbeite mit **Git**, um Änderungen regelmäßig zu committen und auf GitHub zu pushen.
-   - Verwende sinnvolle Commit-Nachrichten, um deinen Fortschritt zu dokumentieren.
-   - Stelle sicher, dass dein finaler Stand auf GitHub vorhanden ist.
+- Um ein Repository über die GitHub CLI zu klonen, klicke auf GitHub CLI und dann auf.
 
-6. **Abgabe:**
-   - **Dokumentation:** Lade die erstellte Word-Dokumentation (inkl. Screenshots und Beschreibung der Schritte) in dein Repository hoch.
-   - **GitHub-Link:** Stelle den Link zu deinem GitHub-Repository bereit, das den finalen Stand des Projekts enthält.
+#### 4. Öffne Git Bash.
 
-### **Ziele der Aufgabe:**
-- Anwendung und Vertiefung von Git und GitHub.
-- Verfassen einer strukturierten Anleitung mit Markdown.
-- Containerisieren einer Node.js-Anwendung mit Docker.
-- Dokumentation des gesamten Prozesses in einem Word-Dokument.
-  
-Viel Erfolg bei der Umsetzung!
+#### 5. Ändere das aktuelle Arbeitsverzeichnis zum Speicherort, in dem Du das geklonte Verzeichnis haben willst.
+
+#### 6. Gib git clone ein, und füge dann die zuvor kopierte URL ein.
+
+#### 7. Drücke die EINGABETASTE, um den lokalen Klon zu erstellen.
+
+Quelle [Github](https://docs.github.com/de/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+## Installation der Notwendigen Packete
+
+### Scripts
+- **Prettify**= Sorgt dafür das der Code einheitlich formatiert ist
+
+- **test** = Ermöglicht es, automatisierte Tests für die Anwendung zu schreiben und auszuführen, um sicherzustellen, dass der Code korrekt funktioniert.
+- **dev** = Sehr praktisch für die Entwicklung, da nodemon den Server bei Änderungen neu startet und das Debuggen erleichtert.
+
+### dependencies
+- **express** = Express ermöglicht es dir, eine Webserver-Anwendung zu erstellen, die HTTP-Anfragen (wie GET, POST) verarbeiten kann.
+- **pg** = Ermöglicht die Verbindung zu einer PostgreSQL-Datenbank, um Daten zu speichern und abzurufen.
+- **sqlite3** = Ermöglicht das Speichern von Daten in einer SQLite-Datenbank, die leichtgewichtig und lokal ist.
+- **uuid** = Zum Erstellen von eindeutigen Bezeichnern für Datenobjekte.
+
+- **wait-port** = Wartet darauf, dass ein bestimmter Port (auf dem ein Dienst läuft) verfügbar ist, bevor die Anwendung fortfährt.
+
+### resolutions
+- **ansi-regex** = Legt eine bestimmte Version eines Pakets fest, das möglicherweise von anderen Abhängigkeiten benötigt wird.
+
+### prettier
+- **trailingComma** = Dies erleichtert das Hinzufügen neuer Elemente und verringert das Risiko von Syntaxfehlern.
+- **tabWidth** = Macht den Code besser lesbar und strukturiert, da die Einrückungen klar erkennbar sind.
+
+- **useTabs** = Sorgt für Konsistenz in der Formatierung, da Tabs in verschiedenen Editoren unterschiedlich angezeigt werden können.
+
+- **semi** = Verbessert die Lesbarkeit und verringert potenzielle Probleme durch fehlende Semikolons.
+
+- **singleQuote** = Konsistente Nutzung einfacher Anführungszeichen verbessert die Lesbarkeit und verringert Inkonsistenzen.
+
+### devDependencies
+- **jest** = Ermöglicht das Schreiben und Ausführen von Tests, um sicherzustellen, dass die Anwendung wie erwartet funktioniert. Tests helfen dabei, Fehler frühzeitig zu erkennen und die Codequalität zu verbessern.
+
+- **nodemon** = Ideal für die Entwicklung, da der Server bei jeder Änderung automatisch neu startet, was die Entwicklung effizienter macht und manuelle Neustarts überflüssig macht.
+- **prettier** = Prettier sorgt dafür, dass der gesamte Code einheitlich und lesbar ist, was bei der Zusammenarbeit und Wartung des Codes hilft.
+
+## [Docker-Konfiguration und -Installation](https://www.docker.com/products/docker-desktop/)
